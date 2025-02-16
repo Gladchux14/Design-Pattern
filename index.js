@@ -8,27 +8,37 @@ class Telephone{
 
   addPhoneNumber(number){
     this.phoneNumbers.add(number)
+    return (` ${number} has been added`)
   }
 
   removePhoneNumber(number){
-    this.phoneNumbers.delete(number)
+    if(this.phoneNumbers.has(number)){
+        this.phoneNumbers.delete(number)
+        return (` ${number} has been removed`)
+    } else {
+        return (` ${number} not Found`)
+    }
+   
   }
 
 
   dialPhoneNumber(number){
    if(this.phoneNumbers.has(number)){
     this.notify(number)
-    return true
+    return ( `I am calling ${number}`)
    }
-   return false
+   return (`cannot dial ${number}`)
   }
 
   addObserver(observer){
     this.observers.add(observer)
+     return (` ${observer} has been added`)
   }
 
   removeObserver(observer){
    this.observers.delete(observer)
+    return (` ${observer} has been removed`)
+   
   }
 
   notify(number){
@@ -47,7 +57,7 @@ console.log(number)
 
 class Observer2 {
     update(number){
-  console.log(`Now Dialing ${number}`)
+  console.log(`Now Dialling ${number}`)
     }
 }
 
