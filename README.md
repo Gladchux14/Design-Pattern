@@ -1,6 +1,6 @@
 # Design-Pattern
 
-###Telephone Package
+### Telephone Package
 
 - This is a code that immplements design pattern, particularly the observer design pattern.
 -  it takes in 3 methods which are 1) add phone number 2) remove phone number and 3) dial phone number.
